@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeWalk - Night Walk Safety App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-4 max-w-md">
+        <h1 class="text-3xl font-bold text-center mb-6">SafeWalk</h1>
+        <div id="status" class="mb-4 p-4 bg-white rounded shadow text-center">Safe Mode Inactive</div>
+        <div class="flex justify-center space-x-4 mb-4">
+            <button id="safeModeBtn" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Activate Safe Mode</button>
+            <button id="safeBtn" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600" disabled>I'm Safe</button>
+            <button id="helpBtn" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600" disabled>Help Me</button>
+        </div>
+        <div class="mb-4">
+            <input id="contactInput" type="text" placeholder="Enter emergency contact email" class="w-full p-2 border rounded">
+        </div>
+        <div class="mb-4">
+            <button id="shareBtn" class="w-full px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-600" disabled>Generate Shareable Location Link</button>
+        </div>
+        <div id="map" class="h-64 bg-gray-200 rounded"></div>
+        <div id="checkpointStatus" class="mt-4 p-4 bg-white rounded shadow text-center"></div>
+    </div>
+
+    <script src="/sw.js"></script>
+    
+</body>
+</html>
